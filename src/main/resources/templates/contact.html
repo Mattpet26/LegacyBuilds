@@ -1,10 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+<head th:replace="fragments/header :: head"></head>
+
 <body>
+<nav th:replace="fragments/navbar :: nav"></nav>
+
+<br>
+<br>
+<br>
+
+<div class="alert alert-primary text-center" th:text="${success}" th:if="${success}"></div>
+<div class="alert alert-danger text-center" th:text="${error}" th:if="${error}"></div>
+
+<form action="/sendgrid" method="post">
+    <label for="fname">First Name:</label><br>
+    <input type="text" id="fname" name="fname"><br>
+
+    <label for="lname">Last Name:</label><br>
+    <input type="text" id="lname" name="lname"><br>
+
+    <label for="email">Email:</label><br>
+    <input type="text" id="email" name="email"><br>
+
+    <label>Message: </label>
+    <textarea rows = "5" cols="50" id="msg" name="msg">Type a message here...</textarea>
+
+    <input type="submit" text="submit">
+</form>
 
 </body>
+<footer th:replace="fragments/footer :: footer"></footer>
 </html>

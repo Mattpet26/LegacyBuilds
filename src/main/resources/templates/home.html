@@ -1,10 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head th:replace="fragments/header :: head"></head>
+<head th:replace="fragments/header :: head">
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
 
 <body>
     <nav th:replace="fragments/navbar :: nav"></nav>
 
+    <div class="mainImage text-center">
+        <div class="col-md-12"></div>
+        <div class="row">
+            <div class="col-md-12" style="padding:15px">
+                <a href="#"><img src="https://via.placeholder.com/250" style="width:100%; height:600px"></a>
+                <div class="carousel-caption">
+                    <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="alert alert-primary" role="alert" th:text="${success}" th:if="${success}"></div>
+    <div class="alert alert-danger" role="alert" th:text="${error}" th:if="${error}"></div>
+
+    <div class="clickyImages text-center">
+        <div class="col-md-12"></div>
+        <div class="row">
+            <div class="col-md-3" style="padding:15px">
+                <a href="/productPage"><img src="https://via.placeholder.com/250"></a>
+                <div class="carousel-caption">
+                    <h1>Product 1</h1>
+                </div>
+            </div>
+            <div class="col-md-3" style="padding:15px">
+                <a href="/productPage"><img src="https://via.placeholder.com/250"></a>
+                <div class="carousel-caption">
+                    <h1>Product 2</h1>
+                </div>
+            </div>
+            <div class="col-md-3" style="padding:15px">
+                <a href="/productPage"><img src="https://via.placeholder.com/250"></a>
+                <div class="carousel-caption">
+                    <h1>Product 3</h1>
+                </div>
+            </div>
+            <div class="col-md-3" style="padding:15px">
+                <a href="/productPage"><img src="https://via.placeholder.com/250"></a>
+                <div class="carousel-caption">
+                    <h1>Product 4</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="storeMainImage text-center">
+        <div class="col-md-12"></div>
+        <div class="row">
+            <div class="col-md-12" style="padding:15px">
+                <a href="#"><img src="https://via.placeholder.com/250" style="width:100%; height:350px"></a>
+                <div class="carousel-caption">
+                    <button>Shop Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 <footer th:replace="fragments/footer :: footer"></footer>
