@@ -12,6 +12,7 @@ public class Computer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long id;
     public String name;
+    // what other criteria is going in here? CPU, GPU, RAM,
     public int price;
     public String computerIMG;
     public String description;
