@@ -12,6 +12,10 @@ body{
     margin: auto;
 }
 
+.nav-link{
+    color: black;
+}
+
 #navbarText {
   overflow: hidden;
   background-color: #333;
