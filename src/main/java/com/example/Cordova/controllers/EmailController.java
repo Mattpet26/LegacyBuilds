@@ -20,11 +20,11 @@ public class EmailController {
     public SendGrid sendgrid;
 
     @PostMapping("/sendgrid")
-    public RedirectView sendEmail(@RequestParam("msg") String message, RedirectAttributes redirAttrs){
+    public RedirectView sendEmail(@RequestParam("msg") String message, RedirectAttributes redirAttrs, String email, String fname, String lname){
         Email from = new Email("LegacyBuilds4cl@gmail.com");
         String subject = "Client Message";
         Email to = new Email("Mattpet26@gmail.com");
-        Content content = new Content("text/html", "I'm replacing the <strong>body tag</strong>" + message);
+        Content content = new Content("text/html", "I'm replacing the <strong>body tag</strong>" + message + email + fname + lname);
 
         Mail mail = new Mail(from, subject, to, content);
 
@@ -53,6 +53,6 @@ public class EmailController {
         }
 
         redirAttrs.addFlashAttribute("success", "Email sent!");
-        return new RedirectView("/contact");
+        return new RedirectView("/");
     }
 }
