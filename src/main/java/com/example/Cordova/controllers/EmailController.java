@@ -20,13 +20,17 @@ public class EmailController {
     public SendGrid sendgrid;
 
     @PostMapping("/sendgrid")
-    public RedirectView sendEmail(@RequestParam("msg") String message, RedirectAttributes redirAttrs, String email, String fname, String lname){
+    public RedirectView sendEmail(@RequestParam("msg") String message, RedirectAttributes redirAttrs, String email, String fname, String lname, String result){
         Email from = new Email("LegacyBuilds4cl@gmail.com");
         String subject = "Client Message";
         Email to = new Email("Mattpet26@gmail.com");
         Content content = new Content("text/html", "I'm replacing the <strong>body tag</strong>" + message + email + fname + lname);
 
         Mail mail = new Mail(from, subject, to, content);
+
+        System.out.println("=============================================================");
+        System.out.println(result);
+        System.out.println("=============================================================");
 
         mail.setReplyTo(new Email("LegacyBuilds4cl@gmail.com"));
         mail.personalization.get(0).addSubstitution("-username-", "Some blog user");

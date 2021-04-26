@@ -3,7 +3,14 @@
 }
 
 body{
-    background-image: url(../images/background.jpg);
+    background-color: black;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+@font-face {
+   font-family: jedi;
+   src: url(../fonts/Starjedi.ttf);
 }
 
 #carouselExampleIndicators{
@@ -16,25 +23,29 @@ body{
     color: black;
 }
 
+.navbar{
+    padding: 0 0 0 0;
+}
+
 #navbarText {
   overflow: hidden;
-  background-color: #333;
+  background-color: black;
   border-radius: 25px;
 }
 
 #navbarText a {
   float: left;
-  color: #f2f2f2;
+  color: grey;
   text-align: center;
   padding: 2px 22px;
   text-decoration: none;
   font-size: 17px;
-  border-left: 1px solid white;
+  border-left: 1px solid grey;
 }
 
 #navbarText a:hover {
   background-color: #ddd;
-  color: black;
+  color: #2c72ab;;
 }
 
 #navbarText a.active {
@@ -48,13 +59,7 @@ body{
 
 .jumbotron{
     margin-bottom: 0;
-    background-color: bisque;
     padding: .4rem .4rem;
-}
-
-.foot{
-    text-align: center;
-    background-color: bisque;
 }
 
 .tabs-below > .nav-tabs,
