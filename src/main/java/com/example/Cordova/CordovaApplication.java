@@ -10,4 +10,5 @@ public class CordovaApplication {
 		SpringApplication.run(CordovaApplication.class, args);
 	}
 
+	//test
 }
