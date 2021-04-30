@@ -28,16 +28,11 @@ public class EmailController {
 
         Mail mail = new Mail(from, subject, to, content);
 
-        System.out.println("=============================================================");
-        System.out.println(result);
-        System.out.println("=============================================================");
-
         mail.setReplyTo(new Email("LegacyBuilds4cl@gmail.com"));
         mail.personalization.get(0).addSubstitution("-username-", "Some blog user");
 
         Request request = new Request();
         Response response = null;
-
 
         try {
             request.setMethod(Method.POST);

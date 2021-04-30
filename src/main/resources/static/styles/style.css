@@ -30,7 +30,6 @@ body{
 #navbarText {
   overflow: hidden;
   background-color: black;
-  border-radius: 25px;
 }
 
 #navbarText a {
