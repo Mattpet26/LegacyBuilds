@@ -15,6 +15,7 @@ public class Computer {
     public int price;
     public String computerIMG;
     public String description;
+    //public String nothing;
 
     public Computer(String name, int price, String computerIMG, String description) {
         this.name = name;
