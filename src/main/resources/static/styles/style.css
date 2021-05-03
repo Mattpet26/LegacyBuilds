@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+a:hover{
+    color:#50c878;
+}
+
 body{
     background-color: black;
     margin-left: 80px;
@@ -164,4 +168,18 @@ body{
 .tabs-right > .nav-tabs .active > a:focus {
   border-color: #ddd #ddd #ddd transparent;
   *border-left-color: #ffffff;
+}
+
+.nav-pills .nav-link:not(.active){
+    background-color: transparent;
+
+}
+
+.nav-pills .nav-link:hover{
+    border: 1px solid white;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link{
+    background-color: white;
+    color: black;
 }
